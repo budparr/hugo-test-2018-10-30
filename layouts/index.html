@@ -1,0 +1,16 @@
+
+
+{{$pages1 :=  where .Site.RegularPages ".Params.foo" "bar"}}
+
+{{$pages2 := where .Site.RegularPages ".Param.foo.baz" "bar"}}
+
+<h1>Pages 1</h1>
+{{range $pages1}}
+  {{.Title}}
+{{end}}
+
+
+<h1>Pages 2</h1>
+{{range $pages2}}
+  {{.Title}}
+{{end}}
